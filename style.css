@@ -8,23 +8,99 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Resto del CSS */
 
+/* Resto del CSS */
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "training mochila estudiante"
+        "training centro tiempo"
+        "alumno pie pie"
+    ;
+    gap: var(--spacing);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body>* {
+    display: grid;
+    border: var(--border);
+
+}
+
+header {
+    grid-column: 1;
+    grid-row: 1/2;
+    grid-area: training;
+    background-color: var(--blue-color);
+    color: var(--primary-color);
+    justify-content: center;
+    text-align: center;
+}
+
+header>h1 {
+    text-align: center;
+
+}
+
+header>p {
+    margin: 20px;
+}
 
 .school {
     background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+    grid-column: 2;
+    grid-row: 1;
+    grid-area: mochila;
 }
 
 .student {
     background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+    grid-column: 3;
+    grid-row: 1;
+    grid-area: estudiante;
+
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+    grid-area: centro;
+    color: var(--blue-color);
+    width: 100%;
+    height: 100%;
+}
+
+main>h2 {
+    text-align: center;
+    margin: auto;
 }
 
 .time {
     background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+    grid-column: 3;
+    grid-row: 2;
+    grid-area: tiempo;
 }
 
 .alumni {
     background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+    grid-column: 1;
+    grid-row: 3;
+    grid-area: alumno;
+}
+
+footer {
+    grid-column: 2/3;
+    grid-row: 3;
+    grid-area: pie;
+    background-color: var(--orange-color);
+    color: var(--primary-color);
+}
+
+footer>button {
+    width: 50%;
 }
 
 .alumni,
@@ -32,4 +108,22 @@
 .student,
 .time {
     background-size: cover;
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "training"
+            "training"
+            "mochila"
+            "estudiante"
+            "centro"
+            "tiempo"
+            "alumno"
+            "pie";
+        gap: 0;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
 }
