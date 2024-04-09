@@ -21,6 +21,7 @@ body {
     ;
     gap: var(--spacing);
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
 body>* {
@@ -123,7 +124,16 @@ footer>button {
             "alumno"
             "pie";
         gap: 0;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+        ;
     }
 
 }
