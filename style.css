@@ -124,16 +124,7 @@ footer>button {
             "alumno"
             "pie";
         gap: 0;
-        grid-template-rows: 
-            1fr
-            1fr
-            1fr
-            1fr
-            1fr
-            1fr
-            1fr
-            1fr
-        ;
+        grid-template-rows: auto;
     }
 
 }
