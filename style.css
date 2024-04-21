@@ -124,7 +124,8 @@ footer>button {
             "alumno"
             "pie";
         gap: 0;
-        grid-template-rows: auto;
+        grid-template-rows:
+            250px 250px 250px 250px 250px 250px;
     }
 
 }
